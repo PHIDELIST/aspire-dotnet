@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "upaRbM1OMoaMLMTVvp/zvAMLBNQFbGBnl8y/ION5nlStV5S7RoQfBj8HDFpvOKvNhWdJeVYkmwMErLK1AZMfeQ==",
+  "dgSpecHash": "B5cAKyZtFr36xwN/SXFj22fW1+UPRPBO4gEk/SRz+AJZmaKildHGdf4wYsNR4zpEEO9TyT/etMqgzQGJXafeNw==",
   "success": true,
   "projectFilePath": "C:\\Users\\PhidelistOluochOmuya\\Desktop\\aspire-dotnet\\aspire-dotnet.AppHost\\aspire-dotnet.AppHost.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PhidelistOluochOmuya\\.nuget\\packages\\aspire.hosting\\8.0.0-preview.7.24251.11\\aspire.hosting.8.0.0-preview.7.24251.11.nupkg.sha512",
     "C:\\Users\\PhidelistOluochOmuya\\.nuget\\packages\\aspire.hosting.apphost\\8.0.0-preview.7.24251.11\\aspire.hosting.apphost.8.0.0-preview.7.24251.11.nupkg.sha512",
+    "C:\\Users\\PhidelistOluochOmuya\\.nuget\\packages\\aspire.hosting.aws\\8.0.0-preview.7.24251.11\\aspire.hosting.aws.8.0.0-preview.7.24251.11.nupkg.sha512",
     "C:\\Users\\PhidelistOluochOmuya\\.nuget\\packages\\aspire.hosting.nodejs\\8.0.0-preview.7.24251.11\\aspire.hosting.nodejs.8.0.0-preview.7.24251.11.nupkg.sha512",
+    "C:\\Users\\PhidelistOluochOmuya\\.nuget\\packages\\awssdk.cloudformation\\3.7.304.2\\awssdk.cloudformation.3.7.304.2.nupkg.sha512",
+    "C:\\Users\\PhidelistOluochOmuya\\.nuget\\packages\\awssdk.core\\3.7.302.16\\awssdk.core.3.7.302.16.nupkg.sha512",
     "C:\\Users\\PhidelistOluochOmuya\\.nuget\\packages\\fractions\\7.3.0\\fractions.7.3.0.nupkg.sha512",
     "C:\\Users\\PhidelistOluochOmuya\\.nuget\\packages\\google.protobuf\\3.24.0\\google.protobuf.3.24.0.nupkg.sha512",
     "C:\\Users\\PhidelistOluochOmuya\\.nuget\\packages\\grpc.aspnetcore\\2.60.0\\grpc.aspnetcore.2.60.0.nupkg.sha512",

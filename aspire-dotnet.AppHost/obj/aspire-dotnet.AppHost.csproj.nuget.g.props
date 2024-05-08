@@ -19,5 +19,7 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_VisualStudio_SlnGen Condition=" '$(PkgMicrosoft_VisualStudio_SlnGen)' == '' ">C:\Users\PhidelistOluochOmuya\.nuget\packages\microsoft.visualstudio.slngen\11.1.0</PkgMicrosoft_VisualStudio_SlnGen>
     <PkgGrpc_Tools Condition=" '$(PkgGrpc_Tools)' == '' ">C:\Users\PhidelistOluochOmuya\.nuget\packages\grpc.tools\2.60.0</PkgGrpc_Tools>
+    <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">C:\Users\PhidelistOluochOmuya\.nuget\packages\awssdk.core\3.7.302.16</PkgAWSSDK_Core>
+    <PkgAWSSDK_CloudFormation Condition=" '$(PkgAWSSDK_CloudFormation)' == '' ">C:\Users\PhidelistOluochOmuya\.nuget\packages\awssdk.cloudformation\3.7.304.2</PkgAWSSDK_CloudFormation>
   </PropertyGroup>
 </Project>
