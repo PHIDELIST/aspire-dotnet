@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using Amazon.DynamoDBv2;
 using api.Services.DelphITService;
+using Models;
 
 
 namespace api.Controllers;
@@ -36,5 +37,14 @@ public class DelphITController : ControllerBase
         }
         return Ok(result);
     }
+    [HttpPost("add")]
+        public async Task<IActionResult> Add([FromBody] DelphIT newItem)
+        {
+            if (newItem == null)
+                return BadRequest("Invalid input");
+
+            await _delphiService.AddAsync(newItem);
+            return Ok("Item added successfully");
+        }
 
 }

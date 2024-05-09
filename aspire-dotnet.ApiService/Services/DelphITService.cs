@@ -50,7 +50,21 @@ namespace api.Services.DelphITService
 
             return response.Items.Select(ConvertItemToDelphIT).ToList();
         }
+        public async Task AddAsync(DelphIT newItem)
+        {
+            var request = new PutItemRequest
+            {
+                TableName = _delphiTableName,
+                Item = new Dictionary<string, AttributeValue>
+                {
+                    {"Id", new AttributeValue {N = newItem.Id.ToString()}},
+                    {"Name", new AttributeValue {S = newItem.Name}},
+                    {"Bio", new AttributeValue {S = newItem.Bio}}
+                }
+            };
 
+            await _ddbClient.PutItemAsync(request);
+        }
         private DelphIT ConvertItemToDelphIT(Dictionary<string, AttributeValue> item)
         {
             return new DelphIT
