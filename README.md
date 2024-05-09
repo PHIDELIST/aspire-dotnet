@@ -1,4 +1,6 @@
 # .NET aspire with AWS
+### initializing new aspire project
++ Here is the link to official .NET aspire docs with step by step configuraion. [.NET Aspire Docs](https://learn.microsoft.com/en-us/dotnet/aspire/get-started/aspire-overview)
 ## Aspire dashboard
 ![image](https://github.com/PHIDELIST/aspire-dotnet/assets/64526896/003b7179-3b79-4aa0-be6f-bad71f373272)
 
