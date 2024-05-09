@@ -17,15 +17,6 @@ public class DelphITController : ControllerBase
         _delphiService = delphiService;
     }
 
-    [HttpGet("whoisdelphi/{id}")]
-    public async Task<IActionResult> GetById(int id)
-    {
-        var result = await _delphiService.GetByIdAsync(id);
-        if (result == null)
-            return NotFound();
-        return Ok(result);
-    }
-
     [HttpGet("whoisdelphi")]
     public async Task<IActionResult> GetAll()
     {

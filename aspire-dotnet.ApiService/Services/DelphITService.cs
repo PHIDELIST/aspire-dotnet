@@ -20,25 +20,6 @@ namespace api.Services.DelphITService
             _delphiTableName = configuration["AWS:Resources:DelphITable"] ?? throw new ArgumentNullException(nameof(configuration), "DelphITable configuration value is missing or null.");
         }
 
-        public async Task<DelphIT?> GetByIdAsync(int id)
-        {
-            var response = await _ddbClient.GetItemAsync(new GetItemRequest
-            {
-                TableName = _delphiTableName,
-                Key = new Dictionary<string, AttributeValue>
-                {
-                    {"Id", new AttributeValue{N = id.ToString()}}
-                }
-            });
-
-            if (response.Item == null || !response.Item.Any())
-            {
-                return null; 
-            }
-
-            return ConvertItemToDelphIT(response.Item);
-        }
-
         public async Task<IEnumerable<DelphIT>> GetAllAsync()
         {
             var scanRequest = new ScanRequest
