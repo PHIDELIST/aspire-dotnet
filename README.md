@@ -1,5 +1,7 @@
 # .NET aspire with AWS
 ## Aspire dashboard
+![image](https://github.com/PHIDELIST/aspire-dotnet/assets/64526896/003b7179-3b79-4aa0-be6f-bad71f373272)
+
 ### Aspire AWS hosting docs
 https://www.nuget.org/packages/Aspire.Hosting.AWS
 
@@ -19,3 +21,4 @@ https://www.nuget.org/packages/Aspire.Hosting.AWS
 ```
 
 ### API swager UI
+![image](https://github.com/PHIDELIST/aspire-dotnet/assets/64526896/be922401-d4d2-469d-8768-598b4b9e3895)
