@@ -8,7 +8,7 @@ var awsConfig = builder.AddAWSSDKConfig()
 
 var ddbLocal = builder.AddAWSDynamoDBLocal("ddblocal"); 
 
-var awsResources = builder.AddAWSCloudFormationTemplate("AspireSampleDevResources", "aws-resources.template")
+var awsResources = builder.AddAWSCloudFormationTemplate("AspireAWSDevResources", "aws-resources.template")
                           .WithParameter("DefaultVisibilityTimeout", "30")
                           .WithReference(awsConfig);
 
