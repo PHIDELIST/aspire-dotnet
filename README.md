@@ -1,17 +1,21 @@
+# .NET aspire with AWS
+## Aspire dashboard
+### Aspire AWS hosting docs
 https://www.nuget.org/packages/Aspire.Hosting.AWS
 
-## Connecting to dynanodb local
- aws dynamodb list-tables --endpoint-url http://localhost:{PORT}/
+### Listing local dynamoDb tables
+ ```aws dynamodb list-tables --endpoint-url http://localhost:{PORT}/```
 
+ + If you get credentials not found error just do ```aws configure``` and provide fake secret key and fake access key id dynamodb local does not validate them.
 ## Dynamodb create table 
-aws dynamodb create-table \
+``` aws dynamodb create-table \
     --table-name DelphITable \
     --attribute-definitions \
         AttributeName=Id,AttributeType=N \
-        AttributeName=Name,AttributeType=S \
-    --key-schema AttributeName=Id,KeyType=HASH AttributeName=Name,KeyType=RANGE\
+    --key-schema AttributeName=Id,KeyType=HASH \
     --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1 \
     --table-class STANDARD\
     --endpoint-url http://localhost:62643
-![Outputaftercreate table](image-1.png)
-![List table](image.png)
+```
+
+### API swager UI
