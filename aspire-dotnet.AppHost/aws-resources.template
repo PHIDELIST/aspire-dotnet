@@ -1,33 +1,53 @@
 {
-    "AWSTemplateFormatVersion" : "2010-09-09",
-    "Parameters" : {
-        "DefaultVisibilityTimeout" : {
-            "Type" : "Number",
-            "Description" : "The default visiblity timeout for messages in SQS queue."
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Parameters": {
+        "DefaultVisibilityTimeout": {
+            "Type": "Number",
+            "Description": "The default visibility timeout for messages in SQS queue."
         }
     },
-    "Resources" : {
-        "ChatMessagesQueue" : {
-            "Type" : "AWS::SQS::Queue",
-            "Properties" : {
-                "VisibilityTimeout" : { "Ref" : "DefaultVisibilityTimeout" }
+    "Resources": {
+        "WdelphitS3Bucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "BucketName": "wdelphit-s3-bucket"
             }
         },
-        "ChatTopic" : {
-            "Type" : "AWS::SNS::Topic",
-            "Properties" : {
-                "Subscription" : [
-                    {"Protocol" : "sqs", "Endpoint" : {"Fn::GetAtt" : [ "ChatMessagesQueue", "Arn"]}}
-                ]
+        "WdelphitECSCluster": {
+            "Type": "AWS::ECS::Cluster",
+            "Properties": {
+                "ClusterName": "wdelphit-ecs-cluster"
+            }
+        },
+        "WdelphitECRRepository": {
+            "Type": "AWS::ECR::Repository",
+            "Properties": {
+                "RepositoryName": "wdelphit-ecr-repository"
+            }
+        },
+        "WdelphitDynamoDBTable": {
+            "Type": "AWS::DynamoDB::Table",
+            "Properties": {
+                "TableName": "wdelphit-dynamodb-table",
+                "AttributeDefinitions": [
+                    { "AttributeName": "Id", "AttributeType": "N" }
+                ],
+                "BillingMode": "PAY_PER_REQUEST"
             }
         }
     },
-    "Outputs" : {
-        "ChatMessagesQueueUrl" : {
-            "Value" : { "Ref" : "ChatMessagesQueue" }
+    "Outputs": {
+        "S3BucketName": {
+            "Value": { "Ref": "WdelphitS3Bucket" }
         },
-        "ChatTopicArn" : {
-            "Value" : { "Ref" : "ChatTopic" }
+        "ECSClusterName": {
+            "Value": { "Ref": "WdelphitECSCluster" }
+        },
+        "ECRRepositoryName": {
+            "Value": { "Ref": "WdelphitECRRepository" }
+        },
+        "DynamoDBTableName": {
+            "Value": { "Ref": "WdelphitDynamoDBTable" }
         }
     }
 }
