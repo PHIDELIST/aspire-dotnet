@@ -22,5 +22,5 @@ https://www.nuget.org/packages/Aspire.Hosting.AWS
         --endpoint-url http://localhost:62643
 ```
 
-### API swager UI
+### API swagger UI
 ![image](https://github.com/PHIDELIST/aspire-dotnet/assets/64526896/be922401-d4d2-469d-8768-598b4b9e3895)
