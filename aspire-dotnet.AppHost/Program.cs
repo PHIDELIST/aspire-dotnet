@@ -7,7 +7,7 @@ var awsConfig = builder.AddAWSSDKConfig()
                         .WithRegion(RegionEndpoint.USWest2);
 
 var ddbLocal = builder.AddAWSDynamoDBLocal("ddblocal"); 
-var messaging = builder.AddRabbitMQ("RabbitMQConnection");
+var messaging = builder.AddRabbitMQ("message");
 var awsResources = builder.AddAWSCloudFormationTemplate("AspireAWSDevResources", "aws-resources.template")
                           .WithParameter("DefaultVisibilityTimeout", "30")
                           .WithReference(awsConfig);

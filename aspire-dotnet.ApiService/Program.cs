@@ -39,6 +39,8 @@ public class Program
         });
         builder.Services.AddRouting(options => options.LowercaseUrls = true);
         builder.AddRabbitMQClient("messaging");
+        builder.Services.AddSingleton<IRabbitMQService, RabbitMQService>();
+
         var app = builder.Build();
 
         app.UseExceptionHandler();
