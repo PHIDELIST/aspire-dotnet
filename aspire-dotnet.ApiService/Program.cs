@@ -38,6 +38,7 @@ public class Program
             c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
         });
         builder.Services.AddRouting(options => options.LowercaseUrls = true);
+        builder.AddRabbitMQClient("messaging");
         var app = builder.Build();
 
         app.UseExceptionHandler();
